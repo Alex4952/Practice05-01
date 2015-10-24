@@ -9,17 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+	
+	@IBOutlet var name: UITextField!
+	@IBOutlet var age: UITextField!
+	@IBOutlet var marriage: UISwitch!
+	@IBOutlet var marriageText: UILabel!
+	@IBOutlet var skillLevel: UISlider!
+	@IBOutlet var family: UIStepper!
+	@IBOutlet var familyText: UILabel!
+	
+	@IBAction func switchMarriage(sender: UISwitch) {
+		if sender.on == true {
+			self.marriageText.text = "기혼"
+		}
+		else {
+			self.marriageText.text = "미혼"
+		}
 	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	
+	@IBAction func stepFamily(sender: UIStepper) {
 	}
-
+	
 
 }
 
